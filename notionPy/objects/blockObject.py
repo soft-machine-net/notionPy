@@ -1,5 +1,5 @@
 from .abstractObject import abstractObject
-from ..objectParser import objectParser
+from .. import objectParser
 
 class blockObject(abstractObject):  # Change abstractObjects to abstractObject
     """BlockObject Class"""
