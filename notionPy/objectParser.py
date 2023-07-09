@@ -5,12 +5,12 @@ from . import parsers
 
 def propertyToText(property):
     property_type = property['type']
-    handler = getattr(parsers.property, f"handle_{property_type}", parsers.property.handle_unsupport_property(property))
+    handler = getattr(parsers.property, f"handle_{property_type}", parsers.property.handle_unsupport_property)
     return handler(property)
 
 def blockToText(block, isMarkdown=False):
     block_type = block["type"]
-    handler = getattr(parsers.block , f"handle_{block_type}", parsers.block.handle_unsupport_block(block))
+    handler = getattr(parsers.block , f"handle_{block_type}", parsers.block.handle_unsupport_block)
     return handler(block, isMarkdown)
 
 def childrenToText(children, isMarkdown = False):
