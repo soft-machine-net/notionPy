@@ -3,7 +3,7 @@ from . import api
 from . import pageBuilder
 from . import utils
 from . import exceptions
-from .objectParser import objectParser
+from . import objectParser
 # Parsar
 from . import parsers
 
